@@ -1,4 +1,6 @@
-package com.pluralsight.calcengine;
+package com.pluralsight.myapp;
+
+import com.pluralsight.calcengine.*;
 
 public class Main {
 
@@ -62,6 +64,7 @@ public class Main {
             System.out.print("result = ");
             System.out.println(equation.getResult());
         }
+
     }
 
 
