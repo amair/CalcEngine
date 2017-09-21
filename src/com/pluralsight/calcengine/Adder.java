@@ -14,4 +14,16 @@ public class Adder extends CalculateBase {
         double value= getLeftVal() + getRightVal();
         setResult(value);
     }
+
+    @Override
+    public String getKeyword() {
+        return "add";
+    }
+
+    @Override
+    public char getSymbol() {
+        return '+';
+    }
+
+
 }

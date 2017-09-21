@@ -8,6 +8,33 @@ public class Main {
 //        useSwitchStatements();
 //        useClassHeirachy();
 
+//        useHelper();
+        String[] statements = {
+                "add 1.0 2.0",
+                "power 5.0 2.0",
+                "divide 100.0 50.0",
+                "add 25.0 92.0",
+                "subtract 225.0 17.0",
+                "multiply 11.0 3.0"
+
+        };
+
+        DynamicHelper helper = new DynamicHelper(new MathProcessing[] {
+                new Adder(),
+                new PowerOf(),
+                new Divider(),
+                new Multiplier(),
+                new Subtractor()
+        });
+
+        for (String statement: statements) {
+            String output = helper.process(statement);
+            System.out.println(output);
+        }
+
+        }
+
+    private static void useHelper() {
         String[] statements = {
                 "add 1.0", //error only 1 param
                 "add xx 25.0", // error string instead of double
@@ -33,7 +60,6 @@ public class Main {
             }
 
         }
-
     }
 
     private static void useClassHeirachy() {

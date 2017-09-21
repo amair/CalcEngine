@@ -1,6 +1,6 @@
 package com.pluralsight.calcengine;
 
-public abstract class CalculateBase {
+public abstract class CalculateBase implements MathProcessing {
     private double leftVal, rightVal, result;
     private char opcode = 'a';
 
@@ -36,6 +36,15 @@ public abstract class CalculateBase {
     public CalculateBase( double leftVal, double rightVal) {
         this.leftVal = leftVal;
         this.rightVal = rightVal;
+    }
+
+    @Override
+    public double doCalculation(double leftVal, double rightVal) {
+        setLeftVal(leftVal);
+        setRightVal(rightVal);
+
+        calculate();
+        return (getResult());
     }
 
     public abstract void calculate();
